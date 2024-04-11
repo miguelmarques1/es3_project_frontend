@@ -1,16 +1,25 @@
-# es3_proj
+<center><h1> Projeto Flutter Web para a disciplina de Engenharia de Software 3 - Fatec de Mogi das Cruzes</h1></center>
 
-A new Flutter project.
+### Requisitos
 
-## Getting Started
+Certifique-se de ter o Flutter instalado em sua máquina. Você pode encontrar as instruções de instalação [aqui](https://flutter.dev/docs/get-started/install).
 
-This project is a starting point for a Flutter application.
+### Como Rodar
 
-A few resources to get you started if this is your first Flutter project:
+1. Clone este repositório para o seu ambiente local:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```bash
+git clone git@github.com:miguelmarques1/es3_project_frontend.git
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2. Acesse a pasta do projeto:
+
+```bash
+cd es3_project_frontend
+```
+
+3. Rode o comando para instalar todas as dependências e rodar o projeto no Google Chrome:
+
+```bash
+flutter run -d chrome
+```
