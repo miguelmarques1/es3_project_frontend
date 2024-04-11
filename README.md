@@ -1,5 +1,11 @@
 <center><h1> Projeto Flutter Web para a disciplina de Engenharia de Software 3 - Fatec de Mogi das Cruzes</h1></center>
 
+### Aluno
+```
+Nome: Miguel Estevão Brasil Yañez Marques.
+RA: 1840482212029
+```
+
 ### Requisitos
 
 Certifique-se de ter o Flutter instalado em sua máquina. Você pode encontrar as instruções de instalação [aqui](https://flutter.dev/docs/get-started/install).
@@ -23,3 +29,13 @@ cd es3_project_frontend
 ```bash
 flutter run -d chrome
 ```
+
+## Telas da aplicação
+
+![Home](screenshots/1.png)
+![Tela de carregamnto](screenshots/2.png)
+![Tela dos livros](screenshots/3.png)
+![Tela do livro](screenshots/4.png)
+![Tela do livro - Apresentação de botões](screenshots/5.png)
+![Tela do livro - Apresentação de ação dos botões](screenshots/6.png)
+![Tela do livro - Modal de desativação do livro](screenshots/7.png)
