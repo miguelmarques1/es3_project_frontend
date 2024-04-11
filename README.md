@@ -1,16 +1,16 @@
 <center><h1> Projeto Flutter Web para a disciplina de Engenharia de Software 3 - Fatec de Mogi das Cruzes</h1></center>
 
-### Aluno
+## Aluno
 ```
-Nome: Miguel Estevão Brasil Yañez Marques.
+Nome: Miguel Estevão Brasil Yañez Marques
 RA: 1840482212029
 ```
 
-### Requisitos
+## Requisitos
 
 Certifique-se de ter o Flutter instalado em sua máquina. Você pode encontrar as instruções de instalação [aqui](https://flutter.dev/docs/get-started/install).
 
-### Como Rodar
+## Como Rodar
 
 1. Clone este repositório para o seu ambiente local:
 
@@ -32,10 +32,21 @@ flutter run -d chrome
 
 ## Telas da aplicação
 
-![Home](screenshots/1.png)
-![Tela de carregamnto](screenshots/2.png)
-![Tela dos livros](screenshots/3.png)
+### Splash Page da aplicação
+Tela apenas para apresentação inicial da aplicação.
+![Splash](screenshots/1.png)
+### Tela de carregamento
+![Tela de carregamento](screenshots/2.png)
+### Home Page da aplicação
+Tela onde serão apresentados os livros.
+![Home](screenshots/3.png)
+### Tela do Livro
+Tela onde aparecem os atributos do livro e dá a possibilidade de adicionar o livro ao carrinho e inativá-lo.
 ![Tela do livro](screenshots/4.png)
+### Tela do Livro - Botões
 ![Tela do livro - Apresentação de botões](screenshots/5.png)
+### Tela do Livro - Botões (Ação)
 ![Tela do livro - Apresentação de ação dos botões](screenshots/6.png)
+### Tela do Livro - Modal de inativação do livro
+Nesta tela, é possível inativar o livro, dando um motivo e uma descrição.
 ![Tela do livro - Modal de desativação do livro](screenshots/7.png)
