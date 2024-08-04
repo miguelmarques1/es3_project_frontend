@@ -1,14 +1,13 @@
 import 'package:es3_proj/app/core/ui/helpers/size_extensions.dart';
-import 'package:es3_proj/app/core/ui/styles/colors_app.dart';
 import 'package:es3_proj/app/core/ui/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
-class AttributeTile extends StatelessWidget {
+class BookDropdownField extends StatelessWidget {
   final String label;
-  final String content;
-  const AttributeTile({
+  final List<DropdownMenuItem> items;
+  const BookDropdownField({
     super.key,
-    required this.content,
+    required this.items,
     required this.label,
   });
 
@@ -19,7 +18,7 @@ class AttributeTile extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          SelectableText(
             label,
             style: context.textStyles.textMedium,
           ),
@@ -36,9 +35,18 @@ class AttributeTile extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(5),
             ),
-            child: Text(
-              content,
-              style: context.textStyles.textLight,
+            child: DropdownButtonFormField(
+              value: items.first.value,
+              onChanged: (value) {},
+              decoration: const InputDecoration(
+                border: InputBorder.none,
+                errorBorder: InputBorder.none,
+                enabledBorder: InputBorder.none,
+                focusedBorder: InputBorder.none,
+                disabledBorder: InputBorder.none,
+                focusedErrorBorder: InputBorder.none,
+              ),
+              items: items,
             ),
           ),
         ],

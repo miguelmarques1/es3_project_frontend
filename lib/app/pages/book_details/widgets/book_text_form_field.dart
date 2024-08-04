@@ -1,14 +1,17 @@
 import 'package:es3_proj/app/core/ui/helpers/size_extensions.dart';
 import 'package:es3_proj/app/core/ui/styles/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class BookTextFormField extends StatelessWidget {
   final double? height;
   final String label;
+  final List<TextInputFormatter>? inputFormatters;
   const BookTextFormField({
     super.key,
     required this.label,
     this.height,
+    this.inputFormatters,
   });
 
   @override
@@ -36,10 +39,11 @@ class BookTextFormField extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(5),
             ),
-            child: const TextField(
+            child: TextField(
+              inputFormatters: inputFormatters,
               keyboardType: TextInputType.multiline,
               maxLines: null,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: InputBorder.none,
                 errorBorder: InputBorder.none,
                 enabledBorder: InputBorder.none,

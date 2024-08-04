@@ -1,7 +1,7 @@
 import 'package:es3_proj/app/core/ui/helpers/size_extensions.dart';
 import 'package:es3_proj/app/core/ui/styles/text_styles.dart';
-import 'package:es3_proj/app/pages/book_detail/widgets/book_dropdown_field.dart';
-import 'package:es3_proj/app/pages/book_detail/widgets/book_text_form_field.dart';
+import 'package:es3_proj/app/pages/book_details/widgets/book_dropdown_field.dart';
+import 'package:es3_proj/app/pages/book_details/widgets/book_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class ChangeStateModal extends StatelessWidget {
@@ -17,7 +17,7 @@ class ChangeStateModal extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Text(
+          SelectableText(
             "Desativar Livro",
             style: context.textStyles.textBold.copyWith(
               fontSize: 20,
@@ -31,27 +31,27 @@ class ChangeStateModal extends StatelessWidget {
             items: [
               DropdownMenuItem(
                 value: "Fora de estoque",
-                child: Text("Fora de estoque"),
+                child: SelectableText("Fora de estoque"),
               ),
               DropdownMenuItem(
                 value: "Verificação automática",
-                child: Text("Verificação automática"),
+                child: SelectableText("Verificação automática"),
               ),
               DropdownMenuItem(
                 value: "Decisão do vendedor",
-                child: Text("Decisão do vendedor"),
+                child: SelectableText("Decisão do vendedor"),
               ),
               DropdownMenuItem(
                 value: "Conteúdo ofensivo",
-                child: Text("Conteúdo ofensivo"),
+                child: SelectableText("Conteúdo ofensivo"),
               ),
               DropdownMenuItem(
                 value: "Baixo interesse",
-                child: Text("Baixo interesse"),
+                child: SelectableText("Baixo interesse"),
               ),
               DropdownMenuItem(
                 value: "Violação de leis governamentais",
-                child: Text("Violação de leis governamentais"),
+                child: SelectableText("Violação de leis governamentais"),
               ),
             ],
           ),
@@ -74,7 +74,7 @@ class ChangeStateModal extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text(
+              child: SelectableText(
                 'Desativar Livro',
                 style: context.textStyles.textExtraBold.copyWith(fontSize: 13),
               ),

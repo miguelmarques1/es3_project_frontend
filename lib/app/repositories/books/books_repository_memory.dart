@@ -2,10 +2,9 @@ import 'package:es3_proj/app/models/author_model.dart';
 import 'package:es3_proj/app/models/book_model.dart';
 import 'package:es3_proj/app/models/dimensions_model.dart';
 import 'package:es3_proj/app/models/group_pricing_model.dart';
-import 'package:es3_proj/app/models/payment_type_model.dart';
-import 'package:es3_proj/app/repositories/books/books_repository.dart';
+import 'package:es3_proj/app/repositories/books/i_books_repository.dart';
 
-class BooksRepositoryMemory implements BooksRepository {
+class BooksRepositoryMemory implements IBooksRepository {
   final books = List.generate(
     70,
     (index) => Book(
@@ -20,7 +19,7 @@ class BooksRepositoryMemory implements BooksRepository {
       codeBar: "2131313132",
       dimensions: Dimensions(depth: 1, height: 2, weight: 2, width: 5),
       edition: 1,
-      groupPricing: GroupPricing(type: TypePricing.DIAMOND),
+      groupPricing: PrecificationGroup(name: "Diamond", id: index),
       id: index,
       isActive: true,
       isbn: "978-85-333-0227-3",
@@ -38,5 +37,19 @@ class BooksRepositoryMemory implements BooksRepository {
   Future<List<Book>> findAllBooks() async {
     await Future.delayed(const Duration(seconds: 2));
     return books;
+  }
+
+  @override
+  Future<Book> findBookById(int id) async {
+    await Future.delayed(const Duration(seconds: 2));
+    return books.firstWhere((book) => book.id == id);
+  }
+
+  @override
+  Future<bool> create(Book book) async {
+    await Future.delayed(const Duration(seconds: 2));
+    book.id = books.length;
+    books.add(book);
+    return true;
   }
 }

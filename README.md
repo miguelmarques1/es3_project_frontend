@@ -50,3 +50,6 @@ Tela onde aparecem os atributos do livro e dá a possibilidade de adicionar o li
 ### Tela do Livro - Modal de inativação do livro
 Nesta tela, é possível inativar o livro, dando um motivo e uma descrição.
 ![Tela do livro - Modal de desativação do livro](screenshots/7.png)
+
+## Diagrama de Classes do Projeto
+![Diagrama de Classes](screenshots/diagrama.png)

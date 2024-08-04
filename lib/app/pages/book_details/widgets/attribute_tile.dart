@@ -1,13 +1,14 @@
 import 'package:es3_proj/app/core/ui/helpers/size_extensions.dart';
+import 'package:es3_proj/app/core/ui/styles/colors_app.dart';
 import 'package:es3_proj/app/core/ui/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
-class BookDropdownField extends StatelessWidget {
+class AttributeTile extends StatelessWidget {
   final String label;
-  final List<DropdownMenuItem> items;
-  const BookDropdownField({
+  final String content;
+  const AttributeTile({
     super.key,
-    required this.items,
+    required this.content,
     required this.label,
   });
 
@@ -18,7 +19,7 @@ class BookDropdownField extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          SelectableText(
             label,
             style: context.textStyles.textMedium,
           ),
@@ -26,7 +27,7 @@ class BookDropdownField extends StatelessWidget {
             height: 5,
           ),
           Container(
-            width: context.percentWidth(.35),
+            width: context.percentWidth(.57),
             padding: const EdgeInsets.all(7),
             decoration: BoxDecoration(
               border: Border.all(
@@ -35,18 +36,9 @@ class BookDropdownField extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(5),
             ),
-            child: DropdownButtonFormField(
-              value: "Fora de estoque",
-              onChanged: (value) {},
-              decoration: const InputDecoration(
-                border: InputBorder.none,
-                errorBorder: InputBorder.none,
-                enabledBorder: InputBorder.none,
-                focusedBorder: InputBorder.none,
-                disabledBorder: InputBorder.none,
-                focusedErrorBorder: InputBorder.none,
-              ),
-              items: items,
+            child: SelectableText(
+              content,
+              style: context.textStyles.textLight,
             ),
           ),
         ],
